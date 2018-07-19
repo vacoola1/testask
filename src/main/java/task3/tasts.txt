@@ -1,0 +1,10 @@
+Each Test suite tries to get available database and blocks it for running tests.
+We can provide blocking marker into remote test-env. It can be an util database or table in the
+tasted database for example.
+Each test suite checks for available database and blocks it and releases it after tests.
+
+Proc:
+It doesn't matter where the tests run (on one env or different).
+
+Cons:
+Testing can finish no correct and remote resource doesn't be released. Problem can be resolved partly by adding timeout for blocking.
